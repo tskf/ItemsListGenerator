@@ -1,0 +1,10 @@
+!sub-category1
+
+title: single_item
+price: 10
+info1: val1
+info2: val2
+
+##
+optional
+multiline description

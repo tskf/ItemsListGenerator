@@ -1,0 +1,280 @@
+br+br
+{
+ line-height: 50%;
+}
+
+a
+{
+ color: #000;
+ text-decoration: none;
+}
+
+label:hover,
+a:hover
+{
+ color: #A00;
+ cursor: pointer;
+}
+
+img
+{
+ max-width: 100%;
+ height: 150px;
+ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img
+{
+ width: 34%;
+ text-align: center;
+}
+
+.exp
+{
+ display: none;
+}
+
+[type=checkbox]:checked + span
+{
+ opacity: 1;
+ max-height: 100%;
+}
+
+.item_info + .item_info
+{
+ margin-top: 10px;
+}
+
+span:hover
+{
+ opacity: 1;
+}
+
+span
+{
+ opacity: 0.4;
+ padding-left: 8px;
+ padding-right: 8px;
+ display: block;
+ max-height: 150px;
+ overflow: hidden;
+ position: relative;
+ background:
+  url('all.png'), url('all.png'),
+  url('all.png'), url('all.png'),
+  url('more.png'), url('more.png');
+ background-position:
+  left top, right top,
+  left bottom, right bottom,
+  left bottom, right bottom;
+ background-repeat: no-repeat;
+ background-attachment: local, local, local, local, scroll, scroll;
+}
+
+table
+{
+ width: 100%;
+ font-weight: normal;
+}
+
+.item_row
+{
+ margin-top: 17px;
+}
+
+.item_row td
+{
+ padding: 12px;
+ border: 1px dashed rgba(0, 0, 0, 0.2);
+ background: rgba(0, 0, 0, 0.04);
+}
+
+.img, .info
+{
+ vertical-align: top;
+}
+
+.item_info td
+{
+ font-size: 90%;
+ width: 100%;
+ height: 25px;
+ border: 0;
+ padding: 4px;
+ padding-left: 8px;
+ background: rgba(0, 0, 0, 0.02);
+}
+
+.item_info td:first-child
+{
+ width: 22%;
+}
+
+.descr
+{
+ padding: 17px 20px 20px 20px !important;
+ border: 1px dashed rgba(0, 0, 0, 0.2) !important;
+ line-height: 19px;
+ font-size: 80%;
+}
+
+.price
+{
+ font-weight: bold;
+ text-align: center;
+ font-size: 140%;
+ width: 60px;
+}
+
+h1
+{
+ color: #CDF;
+ font-size: 250%;
+ text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+ letter-spacing: 2px;
+ background: url(bg-l.png);
+ border-top: 1px solid #000;
+ border-bottom: 1px solid #000;
+ padding: 20px;
+ margin: 0;
+ margin-bottom: 14px;
+}
+
+h2
+{
+ border-bottom: 1px solid #000;
+ margin-top: 0px;
+ letter-spacing: 1.5px;
+}
+
+h3
+{
+ margin-top: 35px;
+ border-bottom: 1px dashed #000;
+ margin-left: 38px;
+}
+
+div
+{
+ margin: 35px auto;
+ width: 90%;
+ padding: 20px;
+ border: 1px dashed rgba(0, 0, 0, 0.5);
+ text-align: left;
+}
+@media (min-width: 1000px)
+{ div{width: 64%;} }
+
+div:nth-of-type(4n+1) { background-color: rgba(40, 140, 40, 0.04); }  /* green  */
+div:nth-of-type(4n+2) { background-color: rgba(255, 150, 0, 0.04); }  /* yellow */
+div:nth-of-type(4n+3) { background-color: rgba(40, 90, 200, 0.04); }  /*  blue  */
+div:nth-of-type(4n+4) { background-color: rgba(145, 70, 185, 0.04); } /* purple */
+
+body
+{
+ font-family: 'Arial CE', Arial, sans-serif;
+ margin: 0;
+ background: url(bg.png);
+ text-align: center;
+}
+
+h1 ~ [type=checkbox][id^="b"]:checked ~ div
+{
+ display: none;
+}
+
+#b0:checked ~ #cat0,
+#b1:checked ~ #cat1,
+#b2:checked ~ #cat2,
+#b3:checked ~ #cat3,
+#b4:checked ~ #cat4,
+#b5:checked ~ #cat5,
+#b6:checked ~ #cat6,
+#b7:checked ~ #cat7
+{
+ display: block !important;
+}
+
+[type=checkbox]:checked ~ table[class^="item_row c"]
+{
+ display: none;
+}
+
+#sort:checked ~ div > .st,
+#sort:not(:checked) ~ div > .sp
+{
+ display: none;
+}
+
+.c0:checked ~ .item_row.c0,
+.c1:checked ~ .item_row.c1,
+.c2:checked ~ .item_row.c2,
+.c3:checked ~ .item_row.c3,
+.c4:checked ~ .item_row.c4,
+.c5:checked ~ .item_row.c5,
+.c6:checked ~ .item_row.c6,
+.c7:checked ~ .item_row.c7,
+.c8:checked ~ .item_row.c8,
+.c9:checked ~ .item_row.c9,
+.c10:checked ~ .item_row.c10,
+.c11:checked ~ .item_row.c11,
+.c12:checked ~ .item_row.c12,
+.c13:checked ~ .item_row.c13,
+.c14:checked ~ .item_row.c14,
+.c15:checked ~ .item_row.c15,
+.c16:checked ~ .item_row.c16,
+.c17:checked ~ .item_row.c17,
+.c18:checked ~ .item_row.c18,
+.c19:checked ~ .item_row.c19,
+.c20:checked ~ .item_row.c20
+{
+ display: table;
+}
+
+h1 ~ label
+{
+ font-size: 140%;
+ letter-spacing: 1.5px;
+ font-weight: bold;
+ margin-right: 20px;
+}
+
+h1 ~ input
+{
+ font-size: 140%;
+ margin-right: 5px;
+}
+
+h2 ~ label + input
+{
+ margin-left: 25px;
+}
+
+#sort, #sort + label
+{
+ font-size: 80%;
+ margin-top: 12px;
+ letter-spacing: 0;
+}
+#sort + label
+{
+ opacity: 0.5;
+}
+
+.imgl
+{
+ position: fixed;
+ opacity: 1;
+ max-height: none;
+ height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+.exp:checked ~ .imgl
+{
+ display: block !important;
+ background-position: center;
+ background-color: rgba(50, 50, 50, 0.7);
+}
