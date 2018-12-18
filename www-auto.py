@@ -1,6 +1,7 @@
 ﻿# encoding: utf-8
 from glob import glob
 from os import chdir, path, system
+from datetime import date
 import unicodedata
 import sys
 import re
@@ -179,6 +180,7 @@ for category_txt in DB:
 
 
 index = mreplace(index, [
+    ['%DATE%', date.today().strftime('%d.%m.%Y')],
     ['%CATEGORY%', ALL_categories_htm],
     ['%CAT_LIST%', ALL_cat_list_htm] ])
 

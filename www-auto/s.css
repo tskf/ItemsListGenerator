@@ -154,7 +154,7 @@ h3
  margin-left: 38px;
 }
 
-div
+div, p
 {
  margin: 35px auto;
  width: 90%;
@@ -163,7 +163,7 @@ div
  text-align: left;
 }
 @media (min-width: 1000px)
-{ div{width: 64%;} }
+{ div, p{width: 64%;} }
 
 div:nth-of-type(4n+1) { background-color: rgba(40, 140, 40, 0.04); }  /* green  */
 div:nth-of-type(4n+2) { background-color: rgba(255, 150, 0, 0.04); }  /* yellow */
