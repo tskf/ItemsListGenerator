@@ -3,6 +3,11 @@ br+br
  line-height: 50%;
 }
 
+p
+{
+ line-height: 180%;
+}
+
 a
 {
  color: #000;
