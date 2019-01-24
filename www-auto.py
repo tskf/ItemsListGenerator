@@ -15,6 +15,7 @@ WWW_DIR    = 'www-auto/'
 PRICE_TXT  = 'price'
 TITLE_TXT  = 'title'
 MISC_TXT   = 'misc'
+WM_label   = 'ItemsListGenerator'
 
 index      = open('index.htm').read()
 category   = open('category.htm').read()
@@ -59,8 +60,12 @@ def mglob(dir, *subs):
 re_info_row = re.compile('(.*?):\s*(.*)')
 re_sub_cats = re.compile('^!(.*)')
 
+WM = ' -alpha set '+\
+'( -pointsize 35 -fill grey87 label:"'+ WM_label +'" -rotate -20 -write mpr:tile +delete ) '+\
+'( +clone -compose multiply -tile mpr:tile -draw "color 0,0 reset" ) -composite '
+
 IM_small = '-resize x150 -normalize -sharpen 0x2 -define jpeg:extent=4KB "%s" "%s" '
-IM_large = '-resize x800 -normalize -unsharp 2x2 -define jpeg:extent=100KB "%s" "%s" '
+IM_large = '-resize x800 -normalize -unsharp 2x2 -define jpeg:extent=100KB "%s"' + WM + '"%s" '
 def IM_save(item_file, args = IM_small, img_pref = ''):
     img_file = replace_ext_safe(item_file, '.jpg')
     img_file_org = replace_ext(item_file, '.jpg')
